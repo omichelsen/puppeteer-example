@@ -1,0 +1,21 @@
+{
+	"name": "puppeteer-example",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Ole Bjørn Michelsen <ole@michelsen.dk>",
+	"license": "MIT",
+	"private": false,
+	"type": "module",
+	"scripts": {
+		"start": "php -S localhost:4000",
+		"screenshot:component": "node screenshot-component.js",
+		"screenshot:page": "node screenshot-page.js",
+		"test": "yarn node --experimental-vm-modules $(yarn bin jest)"
+	},
+	"devDependencies": {
+		"jest": "^29.5.0",
+		"jest-image-snapshot": "^6.1.0",
+		"puppeteer": "^19.9.1",
+		"puppeteer-screen-recorder": "^2.1.2"
+	}
+}

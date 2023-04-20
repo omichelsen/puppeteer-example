@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <title>Puppeteer Example</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>body { padding: 5em }</style>
+  </head>
+  <body>
+    <form class="pure-form">
+      <legend>A nice name form</legend>
+      <input type="text" placeholder="Enter name here">
+      <button type="submit" class="pure-button pure-button-primary">Greet</button>
+      <h2></h2>
+    </form>
+    <script>
+      const form = document.querySelector('form')
+      const input = document.querySelector('input')
+      const h2 = document.querySelector('h2')
+      form.addEventListener('submit', (event) => {
+        event.preventDefault()
+        h2.textContent = `Hi, ${input.value}!`
+      })
+    </script>
+  </body>
+</html>
